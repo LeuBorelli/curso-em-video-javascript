@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E lá vamos nós... Ex 002</title>
+    <style>
+        body {
+            background-color: rgb(179, 137, 221);
+            color: whitesmoke;
+            font:  normal 15pt Manrope;
+        }
+        h1 {
+            color: orange ;
+        }
+        p {
+            color: rgb(36, 39, 31);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição...</p>
+
+    <script>
+       var n1 = prompt('Digite um número: ') // Aqui será guardado uma string dentro da variavel 'n1', é uma caracteristica do window.alert
+       var n2 = prompt('Digite outro número: ') // Aqui será guardado uma string dentro da variavel 'n1', é uma caracteristica do window.alert
+       var soma = n1 + n2 // Nesse caso, o js não fara uma soma, pois para ele os valores informados são strings e o mais irá concaternar os numeros, para que seja somado, devemos converter as variaveis
+       alert('A concatenação dos números digitados é: ' + soma +'!') // aqui ele exibirá a concatenação e não a soma
+
+       var n1 = Number(window.prompt('Digite um número: ')) //aqui estou dizendo para o programa de antemão converter o que for digitado em número, o number recebe tanto numero real como inteiro
+       var n2 = Number(window.prompt('Digite outro número: ')) //aqui estou dizendo para o programa de antemão converter o que for digitado em número, o number recebe tanto numero real como inteiro
+       var soma = n1 + n2 // aqui será feita uma soma ao invés de uma concatenação, pois o que foi armazenado na variavel são numeros e não strings, devido a conversão
+       alert('A soma dos números digitados é: ' + soma +'!') //aqui irá exibir a soma
+
+       //ou
+       var n1 = parseInt(prompt('Digite um número: ')) //parseInt converte para numero inteiro, o 10 informa que é base 10
+       var n2 = parseFloat(prompt('Digite outro número: ')) //parseFloat converte para numeros reais, caso usuário informe um numero quebrado
+       var soma = n1 + n2
+       alert('A soma dos números digitados é: ' + soma +'!')
+
+       let nome = prompt('Digite seu nome: ')
+       let idade = prompt('Digite a sua idade')
+       let nota1 = Number(prompt('Digite a nota do 1º bimestre'))
+       let nota2 = Number(prompt('Digite a nota do 2º bimestre'))
+       let nota3 = Number(prompt('Digite a nota do 3º bimestre'))
+       let nota4 = Number(prompt('Digite a nota do 4º bimestre'))
+       let media = (nota1 + nota2 + nota3 + nota4) / 4
+       if (media >= 7) {
+        alert(`O aluno ${nome} com idade ${idade} obteve a média ${media} e foi aprovado`)
+       } else {
+        alert(`O aluno ${nome} com idade ${idade} obteve a média ${media} e foi reprovado`)
+       }
+
+
+
+    </script>
+</body>
+</html>
